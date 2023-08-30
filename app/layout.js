@@ -1,4 +1,6 @@
-import './globals.css'
+import './globals.css';
+import Navigation from '@/components/navigation.js';
+import Footer from '@/components/footer.js';
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,7 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-white">{children}</body>
+      <body className="bg-white">
+        <Navigation className="py-3"/>
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

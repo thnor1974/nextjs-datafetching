@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import {getCustomer} from '@/components/getData.js'; 
-import Navigation from '@/components/navigation.js';
-import Footer from '@/components/footer.js';
 
 export const metadata = {
   title: 'Fetching App',
@@ -12,14 +10,12 @@ export default async function Home() {
   
   return (
     <>
-    <Navigation />
     <main className="container mx-auto py-5 px-2 h-screen">
       <h1 className="font-bold text-5xl mb-8">Fetching App</h1>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         
       </section>
     </main>
-    <Footer />
     </>
   )
 }

@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {getCustomer} from '@/components/getData.js'; 
-import Navigation from '@/components/navigation.js';
-import Footer from '@/components/footer.js';
 
 export const metadata = {
     title: 'Customer',
@@ -16,7 +14,6 @@ export default async function Customer({params: {id}}) {
 
     return (
         <>
-        <Navigation />
         <main className="container mx-auto h-screen">
           <div className="p-3 border-2 border-gray-150 mb-5"> 
             <h2 className="text-6xl font-bold mb-5">{data.name}</h2>
@@ -37,7 +34,6 @@ export default async function Customer({params: {id}}) {
 </svg>
 Back to Customers</Link>
         </main>
-        <Footer />
         </>
       )
 }

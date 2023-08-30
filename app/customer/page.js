@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import {getAllCustomers} from '@/components/getData.js'; 
 import Link from 'next/link';
-import Navigation from '@/components/navigation.js';
-import Footer from '@/components/footer.js';
 
 export const metadata = {
     title: 'Customers',
@@ -15,8 +13,7 @@ export default async function CustomerPage( {params} ) {
     const url = process.env.NEXT_PUBLIC_URL;
     
     return (
-      <>
-      <Navigation />  
+      <> 
       <main className="container mx-auto py-5">
         <h1 className="font-bold text-5xl mb-8">Customers</h1>
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -43,7 +40,6 @@ export default async function CustomerPage( {params} ) {
           ))}
         </section>
       </main>
-      <Footer />
       </>
     )
   }
